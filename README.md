@@ -9,12 +9,12 @@
 
 ### Features
 
-- [ ] Preate new Portfolio
-- [ ] Portfolio link on github
-- [ ] Project description
-- [ ] Project status [completed, working]
-- [ ] Project image
-- [ ] List of technologies used in the project
+- [x] Preate new Portfolio
+- [x] Portfolio link on github
+- [x] Project description
+- [x] Project status [completed, working]
+- [x] Project image
+- [x] List of technologies used in the project
  
 - [ ] All fields in the Portfolio must be editable
 
