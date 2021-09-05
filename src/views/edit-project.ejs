@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <script>
+        var counter = 1;
+        var dynamicInput = [];
+
+        function addInput() {
+            var newdiv = document.createElement('div');
+            newdiv.id = dynamicInput[counter];
+            newdiv.innerHTML = "technology " + (counter + 1) + " <br><input type='text' name='technologies[]'> <input type='button' value='-' onClick='removeInput(" + dynamicInput[counter] + ");'>";
+            document.getElementById('formulario').appendChild(newdiv);
+            counter++;
+        }
+
+        function removeInput(id) {
+            var elem = document.getElementById(id);
+            counter--;
+            return elem.parentNode.removeChild(elem);
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/project/<%= project._id %>" method="POST" id="formulario">
+        <h1>
+            create a new portfolio
+        </h1>
+        <br>
+
+        <div class="container">
+
+
+            <div>
+                <label for="projectName">Project Name</label>
+                <input type="text" name="projectName" value="<%= project.projectName %>" required="required">
+            </div>
+
+            <div>
+                <label for="description">Description</label>
+                <textarea name="description" cols="30" rows="10"> <%= project.description %> </textarea>
+            </div>
+
+            <div>
+                <label for="imageUrl">image Url</label>
+                <input type="url" name="imageUrl" value="<%= project.imageUrl  %>" required="required">
+            </div>
+
+            <div>
+                <label for="linkGit">link do repository on github</label>
+                <input type="text" name="linkGit" value="<%= project.linkGit  %>" required="required">
+            </div>
+
+
+            <div>
+                <label for="finished">project status</label>
+                <select id="finished">
+                    <option selected="selected" value="<%= project.finished %>"></option>
+                    <option value="false">working</option>
+                    <option value="true">finalized</option>
+                </select>
+            </div>
+
+
+            <div id="dynamicInput[0]">
+                <% for (var i=0; i < project.technologies.length; i++) { %>
+                    <input type="text" value="<%= project.technologies[i] %>" name="technologies[]">
+
+
+                    <% } %>
+            </div>
+            <input type="button" value="+" onClick="addInput();">
+
+        </div>
+
+        <input type="submit" value="Submit">
+
+
+    </form>
+</body>
+
+</html>

@@ -13,4 +13,8 @@ router.get('/projects', portfolioController.all)
 
 router.get('/project/:id', portfolioController.one)
 
+router.get('/project-edit/:id', portfolioController.edit)
+
+router.post('/project/:id', portfolioController.saveEdit)
+
 module.exports = router
