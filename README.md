@@ -18,9 +18,9 @@
  
 - [ ] All fields in the Portfolio must be editable
 
-- [ ] show one Portfolio by id
+- [x] show one Portfolio by id
 - [ ] remove one Portfolio from list
-- [ ] show list of all Portfolios 
+- [x] show list of all Portfolios 
 
 
 # Clone este repositório

@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        img {
+            width: 50%;
+        }
+
+        div {
+            margin-bottom: 50px;
+        }
+    </style>
+
+
+    <div>
+
+
+        <h1>
+            name: <%= project.projectName %>
+        </h1>
+
+        <p>
+            description: <%= project.description %>
+        </p>
+
+        <img src="<%= project.imageUrl  %> ">
+
+        <p><a href="<%= project.linkGit %> " target="_blank">Git</a></p>
+
+        <p>
+            project finalized: <%= project.finished %>
+        </p>
+
+        <p>
+            technologies: <%= project.technologies %>
+        </p>
+
+
+    </div>
+    <p><a href="/projects">all projects</a></p> </a></p>
+    <p><a href="/">Back to home </a></p>
+
+
+</body>
+
+</html>

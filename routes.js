@@ -11,4 +11,6 @@ router.post('/new-project', portfolioController.create)
 
 router.get('/projects', portfolioController.all)
 
+router.get('/project/:id', portfolioController.one)
+
 module.exports = router

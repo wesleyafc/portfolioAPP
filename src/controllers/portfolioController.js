@@ -32,3 +32,10 @@ module.exports.all = async function (request, response) {
     }
 
 }
+
+module.exports.one = async function (request, response) {
+    const _id = request.params.id
+    const singleProject = await portfolio.findOne({ _id })
+
+    return response.render('../src/views/one-project', { project: singleProject })
+}
