@@ -9,18 +9,18 @@
 
 ### Features
 
-- [ ] create new Portfolio
-- [ ] link do Portfolio no git hub
-- [ ] descrição do projeto
-- [ ] status do projeto [finalizado, trabalhando]
-- [ ] imagem do projeto rodando
-- [ ] tecnologias usadas no projeto
+- [ ] Preate new Portfolio
+- [ ] Portfolio link on github
+- [ ] Project description
+- [ ] Project status [completed, working]
+- [ ] Project image
+- [ ] List of technologies used in the project
  
-- [ ] edit todas as informações do Portfolio
+- [ ] All fields in the Portfolio must be editable
 
 - [ ] show one Portfolio by id
 - [ ] remove one Portfolio from list
-- [ ] show list of all Portfolio 
+- [ ] show list of all Portfolios 
 
 
 # Clone este repositório
