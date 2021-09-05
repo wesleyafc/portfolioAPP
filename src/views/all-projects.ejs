@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        img {
+            width: 50%;
+        }
+
+        div {
+            border-top: 11px solid red
+        }
+    </style>
+
+
+    <% allProjects.forEach(function(project) { %>
+        <div>
+
+
+            <h1>
+                name: <%= project.projectName %>
+            </h1>
+
+            <p>
+                description: <%= project.description %>
+            </p>
+
+            <img src="<%= project.imageUrl  %> ">
+
+            <p><a href="<%= project.linkGit %> " target="_blank">Git</a></p>
+
+            <p>
+                project finalized: <%= project.finished %>
+            </p>
+
+            <p>
+                technologies: <%= project.technologies %>
+            </p>
+
+            <% }) %>
+
+        </div>
+        <p><a href="/">Back to home </a></p>
+
+
+</body>
+
+</html>

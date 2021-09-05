@@ -9,4 +9,6 @@ router.get('/new-project', portfolioController.renderCreatePage)
 
 router.post('/new-project', portfolioController.create)
 
+router.get('/projects', portfolioController.all)
+
 module.exports = router
